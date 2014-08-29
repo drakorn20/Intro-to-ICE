@@ -1,0 +1,452 @@
+<!DOCTYPE html>
+
+<head>
+	<link href="/normalize.css" rel="stylesheet">
+	<title>Drift's book : Poom Drift
+	</title>
+	<style>
+        
+        @font-face {
+            font-family: roboto_light;
+            src: url(roboto/Roboto-Light.ttf);
+        }
+
+		header {
+     		text-align: left;
+      		color: white;           
+    	}
+
+        header img{
+            -webkit-box-shadow: 0px 0px 24px 0px rgba(50, 50, 50, 1);
+            -moz-box-shadow:    0px 0px 24px 0px rgba(50, 50, 50, 1);
+            box-shadow:         0px 0px 24px 0px rgba(50, 50, 50, 1);
+        }
+
+    	body {
+            font-family: roboto_light;
+    		background-image: url('image/poom5.jpg');
+    		background-repeat: no-repeat;
+    		background-position: top right;
+    		background-color: #D8D8D8;
+    		background-attachment: fixed;
+            margin: 0px;
+            width:  100%;
+            color: #707070;
+            overflow-x: hidden;
+    	}
+
+        body ul{
+            font-size: 25px;
+        }
+
+    	#profile {
+    		margin: 100px 0px 0px 100px;
+    		padding: 20px 0px 0px 0px;
+    		background-color: rgba(208,208,208,0.5);
+    		width: 500px ;
+    		height: 800px;
+            /*border: 7px solid white;
+            border-radius: 10px;*/
+            -webkit-box-shadow: 0px 0px 24px 0px rgba(50, 50, 50, 1);
+            -moz-box-shadow:    0px 0px 24px 0px rgba(50, 50, 50, 1);
+            box-shadow:         0px 0px 24px 0px rgba(50, 50, 50, 1);
+            text-align: center;
+    	}
+
+        #profile header{
+            margin: 0px 0px 0px 100px;
+        }
+
+        #profile h1{
+            font-size: 60px;
+        }
+
+        #profile p{
+            font-size: 25px;
+            height: 110px;
+            left:10px;
+            right:10px;
+        }
+
+        .intro{
+            text-align: left;
+            padding: 0px 40px 20px 40px;
+        }
+
+        .intro2{
+            text-align: justify;
+            padding: 0px 40px 0px 40px;
+            font-size: 20px;
+        }
+
+        .logo{
+            margin-top:-30px;
+        }
+
+        .fixedbar img{
+            top: 0px;
+            left: 0px;
+            width: 100%;
+            height: 50px;
+            position: fixed;
+            z-index: 1;
+        }
+
+        .fixedbarLogoName{
+            position:fixed;
+            color:#FFFFFF;
+            top:10px;
+            left:10px;
+            font-size: 25px;
+            z-index: 2;  
+        }
+
+        .fixedbarSearch{
+            position: fixed;
+            top:10px;
+            left:75%;
+            z-index: 2;
+        }
+
+         .fixedbar a{
+            color: white;;
+            text-decoration: none; 
+            z-index: 2;
+        }
+
+        .fixedbar a:hover{
+            color: #707070;
+            text-decoration: none; 
+            z-index: 2;
+        }
+
+        .link1 a{
+           position: fixed;
+            top:15px;
+            left:15%;
+            color:white;
+            text-decoration: none; 
+            z-index: 2;
+        }
+
+        .link1 a:hover{
+            color:#3399CC;
+            z-index: 2;
+        }
+
+        .link2 a{
+            position: fixed;
+            top:15px;
+            left:30%;
+            color:white;
+            text-decoration: none; 
+            z-index: 2;
+
+        }
+
+        .link2 a:hover{
+            color:#3399CC;
+            z-index: 2;
+        }
+
+        .link3 a{
+            position: fixed;
+            top:15px;
+            left:45%;
+            color:white; 
+            text-decoration: none;
+            z-index: 2;
+        }
+
+        .link3 a:hover{
+            color:#3399CC;
+            z-index: 2;
+        }
+
+        .link4 a{
+            position: fixed;
+            top:15px;
+            left:60%;
+            color:white; 
+            text-decoration: none;
+            z-index: 2;
+        }
+
+        .link4 a:hover{
+            color:#3399CC;
+            z-index: 2;
+        }
+
+
+        #etc{
+            width: 100%;
+            margin-top: 100px;
+            padding: 40px 50px 50px 40px;
+            background-color: white;
+            padding-bottom: 50px;
+        }
+        
+        #etc h1{
+            font-size: 50px;
+        }
+
+        .imagebox{
+            width:100%;
+            margin-left: 40px;  
+            padding-top: 40px;          
+        }
+
+        .imagebox h2{
+            height:30px ;
+            font-size: 30px;
+        }      
+
+
+        .imagebox img{
+            margin-left: 30px;
+            border-radius: 10px; 
+            -webkit-box-shadow: 0px 0px 17px 0px rgba(50, 50, 50, 0.93);
+            -moz-box-shadow:    0px 0px 17px 0px rgba(50, 50, 50, 0.93);
+            box-shadow:         0px 0px 17px 0px rgba(50, 50, 50, 0.93);          
+            margin-bottom: 30px;        
+
+        }
+
+        .imagebox img:hover{
+            opacity: 0.4;       
+            z-index:-1;    
+        }
+
+        #search {
+
+        }
+
+
+        #search input[type="text"] {
+            background: no-repeat 10px 6px #444;
+            border: 0 none;
+            font: bold 12px Arial,Helvetica,Sans-serif;
+            color: #d7d7d7;
+            width:150px;
+            padding: 6px 15px 6px 35px;
+            -webkit-border-radius: 20px;
+            -moz-border-radius: 20px;
+            border-radius: 20px;
+            text-shadow: 0 2px 2px rgba(0, 0, 0, 0.3); 
+            -webkit-box-shadow: 0 1px 0 rgba(255, 255, 255, 0.1), 0 1px 3px rgba(0, 0, 0, 0.2) inset;
+            -moz-box-shadow: 0 1px 0 rgba(255, 255, 255, 0.1), 0 1px 3px rgba(0, 0, 0, 0.2) inset;
+             box-shadow: 0 1px 0 rgba(255, 255, 255, 0.1), 0 1px 3px rgba(0, 0, 0, 0.2) inset;
+            -webkit-transition: all 0.7s ease 0s;
+            -moz-transition: all 0.7s ease 0s;
+            -o-transition: all 0.7s ease 0s;
+            transition: all 0.7s ease 0s;
+        }
+
+        #search input[type="text"]:focus {
+            background: no-repeat 10px 6px #fcfcfc;
+            color: #6a6f75;
+            width: 200px;
+            -webkit-box-shadow: 0 1px 0 rgba(255, 255, 255, 0.1), 0 1px 0 rgba(0, 0, 0, 0.9) inset;
+            -moz-box-shadow: 0 1px 0 rgba(255, 255, 255, 0.1), 0 1px 0 rgba(0, 0, 0, 0.9) inset;
+            box-shadow: 0 1px 0 rgba(255, 255, 255, 0.1), 0 1px 0 rgba(0, 0, 0, 0.9) inset;
+            text-shadow: 0 2px 3px rgba(0, 0, 0, 0.1);
+        }
+
+        ul a{
+            color: #707070 ;
+            text-decoration: none;
+        }
+       ul a:hover{
+            color:#3399CC;
+        }
+    }
+
+	</style>
+
+    <script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
+    <script>
+
+        $(document).ready(function() {
+
+            var header = $('body');
+            var backgrounds = new Array('url(image/poom5.jpg)', 'url(image/poom3.jpg)');
+            var current = 0;
+
+            function nextBackground() {
+                current++;
+                current = current % backgrounds.length;
+                header.css('background-image', backgrounds[current]);
+            }
+
+            setInterval(nextBackground, 5000);
+
+            header.css('background-image', backgrounds[0]);
+
+
+        $(document).ready(function() {
+          $("a[href^='#']").anchorAnimate()
+        });
+
+        jQuery.fn.anchorAnimate = function(settings) {
+
+            settings = jQuery.extend({
+                speed : 1100
+            }, settings);   
+
+            return this.each(function(){
+                var caller = this
+                $(caller).click(function (event) {  
+                    event.preventDefault()
+                    var locationHref = window.location.href
+                    var elementClick = $(caller).attr("href")
+
+                    var destination = $(elementClick).offset().top;
+                    $("html:not(:animated),body:not(:animated)").animate({ scrollTop: destination}, settings.speed, function() {
+                        window.location.hash = elementClick
+                    });
+                    return false;
+                })
+            })
+        }
+
+   
+    });    
+
+    </script>
+
+    <script src="js/jquery-1.11.0.min.js"></script>
+    <script src="js/lightbox.min.js"></script>
+    <link href="css/lightbox.css" rel="stylesheet" />
+
+</head>
+	
+
+<body>
+
+    <div class="fixedbar">
+        <img src="image/black.png">
+        <div class="fixedbarLogoName">
+            <a href="#profile">Drift's book</a>
+        </div>
+        <div class="fixedbarSearch">
+            <form method="get" action="/search" id="search">
+              <input name="q" type="text" size="40" placeholder="Search..." />
+            </form>
+        </div>
+        <div class="link1">
+            <a href="#MyGallery">My Gallery</a>
+        </div>
+        <div class="link2">
+            <a href="#MyTopFriends">My Top Friends</a>
+        </div>
+        <div class="link3">
+            <a href="#MyHobbies">My Hobbies</a>
+        </div>
+        <div class="link4">
+            <a href="#MyFavourites">My Favourites</a>
+        </div>
+       
+    </div>
+
+    <div id="profile">
+        <h1><b>Poom Drift</b></h1>
+		<header>           
+			<img src="image/poom4.jpg" width="300" height="220">
+		</header>
+		<p><b>Racer/Hair Stylist/Celebrity/Guitarist Intimate Acoustic Folk/Billionaire</b></p>
+        <div class="intro">
+            My name is Phoobadee Pholpruk.(Nickname, Poom) I am 19 years old. My Birthday is on 8th March 1995. I was born in Bangkok, Thailand on a Wednesday morning. I studied at Bangkok Christian College since year 1 until year 9. I finished high school from Bethlehem College, Tauranga, New Zealand in Nov 2012. Now I am studying bachelor's degree at International School of Engineering, Chulalongkorn University, Thailand.</div>
+        <div class="intro2">
+            Contact :</div>
+            <div class="logo">
+                <a href="https://www.facebook.com/PoomPholpruk"><img src="image/logo/facebook.png" width="7%" height="auto"></a>
+                <a href="http://instagram.com"><img src="image/logo/instagram.png" width="7%" height="auto"></a>
+                <a href="http://twitter.com"><img src="image/logo/twitter.png" width="7%" height="auto"></a>
+                <a href="http://youtube.com"><img src="image/logo/youtube.png" width="7%" height="auto"></a>
+                <a href="http://skype.com"><img src="image/logo/skype.png" width="7%" height="auto"></a>
+                <a href="http://linkedin.com"><img src="image/logo/linkedin.png" width="7%" height="auto"></a>
+            </div>
+	   </div>
+
+    <div id="etc">
+        
+        <h1>ABOUT ME</h1>
+
+            <div id="MyGallery">
+
+                <div class="imagebox">                    
+
+                    <h2>My Gallery</h2>
+
+                    
+                    <a href="image/poom3.jpg" data-lightbox="poom3.jpg" data-title="Me & Sea"><img src="image/poom3.jpg" width="28%" height="auto"></a>
+                    <a href="image/poomd1.jpg" data-lightbox="poomd1.jpg" data-title="Me & Sir Knight"><img src="image/poomd1.jpg" width="28%" height="auto"></a>
+                    <a href="image/poomd3.jpg" data-lightbox="poomd3.jpg" data-title="My Girls"><img src="image/poomd3.jpg" width="28%" height="auto"></a>
+                    <a href="image/poomd4.jpg" data-lightbox="poomd4.jpg" data-title="Me & Pun"><img src="image/poomd4.jpg" width="28%" height="auto"></a>
+                    <a href="image/poom5.jpg" data-lightbox="poom5.jpg" data-title="Me Handsome"><img src="image/poom5.jpg" width="28%" height="auto"></a>
+                    <a href="image/poom6.jpg" data-lightbox="poom6.jpg" data-title="Me too Handsome"><img src="image/poom6.jpg" width="28%" height="auto"></a>
+
+                   
+            </div>
+
+        </div>
+
+        <div id="MyTopFriends">
+
+            <div class="imagebox">              
+
+                <h2>My Top Friends</h2>
+
+                    <a href="image/benzson3.jpg" data-lightbox="benzson3.jpg" data-title="Benzsan"><img src="image/benzson3.jpg" width="28%" height="auto"></a>
+                    <a href="image/nam.jpg" data-lightbox="nam.jpg" data-title="Sypruskung"><img src="image/nam.jpg" width="28%" height="auto"></a>
+                    <a href="image/yodpan.jpg" data-lightbox="yodpan.jpg" data-title="Yodpan"><img src="image/yodpan.jpg" width="28%" height="auto"></a>
+                    <a href="image/ping.jpg" data-lightbox="ping.jpg" data-title="J'PING"><img src="image/ping.jpg" width="28%" height="auto"></a>
+                    <a href="image/aum.jpg" data-lightbox="aum.jpg" data-title="Freek"><img src="image/aum.jpg" width="28%" height="auto"></a>
+                    <a href="image/plan.jpg" data-lightbox="plan.jpg" data-title="Bann"><img src="image/plan.jpg" width="28%" height="auto"></a>
+
+                </div>
+
+        </div>
+
+        <div id="MyHobbies">
+
+            <div class="imagebox">
+                
+                <h2>My Hobbies</h2>
+
+                    <a href="image/bm_ed.jpg" data-lightbox="bm_ed.jpg" data-title="Racing"><img src="image/bm_ed.jpg" width="28%" height="auto"></a>
+                    <a href="image/guitar.jpg" data-lightbox="guitar.jpg" data-title="Playing Guitar"><img src="image/guitar.jpg" width="28%" height="auto"></a>
+                    <a href="image/ducati2.jpg" data-lightbox="ducati2.jpg" data-title="Touring"><img src="image/ducati2.jpg" width="28%" height="auto"></a>
+                    <a href="image/mortor_ed.jpg" data-lightbox="motor_ed.jpg" data-title="Motorcycling"><img src="image/motor_ed.jpg" width="28%" height="auto"></a>
+                    <a href="image/car_ed.jpg" data-lightbox="car_ed.jpg" data-title="Drifting"><img src="image/car_ed.jpg" width="28%" height="auto"></a>
+                    <a href="image/drum_ed.jpg" data-lightbox="drum_ed.jpg" data-title="Drumming"><img src="image/drum_ed.jpg" width="28%" height="auto"></a>
+
+                </div>
+
+        </div>
+
+        <div id="MyFavourites">
+
+            <div class="imagebox">
+                
+                <h2>My Favourites</h2>
+
+                    <a href="image/taylor_ed.jpg" data-lightbox="taylor_ed.jpg" data-title="Benzsan's Girlfriend"><img src="image/taylor_ed.jpg" width="28%" height="auto"></a>
+                    <a href="image/maroon5.jpg" data-lightbox="maroon5.jpg" data-title="MAROON 5"><img src="image/maroon5.jpg" width="28%" height="auto"></a>
+                    <a href="image/adam_ed.jpg" data-lightbox="adam_ed.jpg" data-title="Adam Leviene"><img src="image/adam_ed.jpg" width="28%" height="auto"></a>
+                    <a href="image/keira_ed.jpg" data-lightbox="keira_ed.jpg" data-title="Keira Knightly"><img src="image/keira_ed.jpg" width="28%" height="auto"></a>
+                    <a href="image/scarlett.jpg" data-lightbox="scarlett.jpg" data-title="One of my collection"><img src="image/scarlett.jpg" width="28%" height="auto"></a>
+                    <a href="image/megan_fox.jpg" data-lightbox="megan_fox.jpg" data-title="My rare collection"><img src="image/megan_fox.jpg" width="28%" height="auto"></a>
+
+                </div>
+
+        </div>
+
+        <ul>
+            <li><a href="#profile">Wana see me again ?</a></li>
+        </ul>
+
+    </div>
+    
+
+</body>
